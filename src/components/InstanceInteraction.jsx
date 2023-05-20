@@ -73,7 +73,7 @@ export default function InstanceInteraction() {
         escrowDetails && setIsBeneficiary(()=>{ return (address === escrowDetails.beneficiary) })
         escrowDetails && setIsApproved(()=>{ return (parseFloat(allowance) >= parseFloat(escrowDetails.tokenAmount)) })
         escrowDetails && setIsTransactionDone(()=>{ return (escrowDetails.isCompleted || escrowDetails.isCanceleld || escrowDetails.beneficiaryRejected) })
-    }, [address, isCreator, isBeneficiary, allowance])
+    }, [address, isCreator, isBeneficiary, allowance, escrowDetails])
     
     async function approveToken() {
 
