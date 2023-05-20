@@ -21,7 +21,7 @@ export default function DApp(){
             address: escrowContract.constractAddress,
             abi: escrowContract.abi,
             functionName: 'getHistory',
-            args: [`${address}`]
+            args: [address]
         })
 
         setInstanceIds(data?.InstanceIds)
